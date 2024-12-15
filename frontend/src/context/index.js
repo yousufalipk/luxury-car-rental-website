@@ -10,13 +10,16 @@ export const UserProvider = (props) => {
 
     const [isAuth, setIsAuth] = useState(false);
     const [sideMenu, setSideMenu] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
 
     return (
         <UserContext.Provider value={{
             isAuth,
             setSideMenu,
-            sideMenu
+            sideMenu,
+            setIsScrolled,
+            isScrolled
         }}
         >
             {props.children}

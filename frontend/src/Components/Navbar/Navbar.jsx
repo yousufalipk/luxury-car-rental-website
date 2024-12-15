@@ -11,9 +11,8 @@ import Cart from '../../assets/cart.svg';
 import { useUser } from '../../context';
 
 const Navbar = () => {
-    const { setSideMenu } = useUser();
+    const { setSideMenu, setIsScrolled, isScrolled } = useUser();
 
-    const [isScrolled, setIsScrolled] = useState(false);
     const mobileNumber = '1.877.736.8553';
     const timmings = '8:00am - 8:00pm';
     const facebookLink = 'https://www.facebook.com';
@@ -32,11 +31,6 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    useEffect(() => {
-        console.log('Is Scrolled', isScrolled);
-    }, [isScrolled]);
-
 
     return (
         <div className='w-full h-[15vh] relative'>
@@ -79,7 +73,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Transparent Navbar */}
-            <div className={`w-full h-[10vh] bg-black bg-opacity-40 ${isScrolled && `bg-opacity-100`}`}>
+            <div className={`w-full h-[10vh] bg-black ${isScrolled ? `bg-opacity-100` : `bg-opacity-40`}`}>
                 <div className='w-[80vw] h-full mx-auto flex justify-between items-center text-white'>
                     <div className='w-1/2 h-full flex justify-start items-center text-2xl font-semibold'>
                         Logo Here

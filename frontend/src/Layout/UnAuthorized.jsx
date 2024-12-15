@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useUser } from '../context';
 
 import Navbar from '../Components/Navbar/Navbar';
 import Home from '../Pages/Home/Home';
+import Cars from '../Pages/Cars/Cars';
+import GetQuote from '../Pages/GetQuote/GetQuote';
+import WhyUs from '../Pages/WhyUs/WhyUs';
+import Articles from '../Pages/Articles/Articles';
+import Footer from '../Components/Footer/Footer';
 
 import Cross from '../assets/cross.svg';
 import Facebook from '../assets/facebook.svg';
 import Twitter from '../assets/twitter.svg';
 import Instagram from '../assets/insta.svg';
+import Angle from '../assets/angle.svg';
 
 const UnAuthorized = () => {
 
@@ -15,18 +21,35 @@ const UnAuthorized = () => {
     const twitterLink = 'https://www.twitter.com';
     const instagramLink = 'https://www.instagram.com';
 
-    const { sideMenu, setSideMenu } = useUser();
+    const { sideMenu, setSideMenu, isScrolled } = useUser();
     const [popupClosing, setPopupClosing] = useState(false);
 
+    useEffect(() => {
+        console.log('Is Scorlled', isScrolled);
+    }, [isScrolled])
+
     return (
-        <div className={`w-full h-[100vh] relative ${sideMenu ? 'overflow-hidden' : ''}`}>
+        <div className="w-full h-[100vh] relative">
+            {isScrolled && (
+                <div
+                    onClick={() => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth',
+                        });
+                    }}
+                    className='fixed rounded-full bottom-5 right-5 z-30 bg-customYellow p-2 flex justify-center items-center transform transition-transform duration-200 hover:translate-y-[-4px]'>
+                    <img src={Angle} alt="angle" width={25} className='invert' />
+                </div>
+            )}
+
             {sideMenu && (
                 <div
                     style={{
                         animation: `${popupClosing ? "fadeOut" : "fadeIn"
                             } 0.5s ease-in-out forwards`,
                     }}
-                    className='w-full h-full bg-black absolute z-50 bg-opacity-50 backdrop-blur-sm flex justify-end items-center'>
+                    className='fixed z-50 w-full h-full bg-black bg-opacity-50 backdrop-blur-sm flex justify-end items-center'>
                     <div
                         style={{
                             animation: `${popupClosing ? "closePopup" : "openPopup"
@@ -101,11 +124,30 @@ const UnAuthorized = () => {
                 <Home />
             </section>
 
-            <section className='w-full h-[100vh] bg-black text-white text-4xl font-semibold'>
-                <p className='animate-slideUpText'>
-                    Ameer Yousuf Ali Bhatti
-                </p>
+            {/* Cars */}
+            <section className='w-full h-[200vh] py-20 flex justify-center items-center'>
+                <Cars />
             </section>
+
+            {/* Get Quote */}
+            <section className='w-full h-[80vh] pt-10'>
+                <GetQuote />
+            </section>
+
+            {/* Why Choose Us */}
+            <section className='w-full h-[90vh] bg-customYellow'>
+                <WhyUs />
+            </section>
+
+            {/* Articles */}
+            <section className='w-full h-[120vh] pt-10'>
+                <Articles />
+            </section>
+
+            {/* Footer */}
+            <div className='w-full h-[90vh] bg-black'>
+                <Footer />
+            </div>
         </div>
     );
 };
