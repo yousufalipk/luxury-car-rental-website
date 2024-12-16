@@ -6,14 +6,14 @@ import HandShake from '../../assets/handshake.svg';
 
 const WhyUs = () => {
     return (
-        <div className='w-full h-full flex justify-center items-center text-white text-center py-16'>
+        <div className='w-full h-full flex justify-center items-center text-white text-center py-16 lg:py-24'>
             <div className='w-[80vw] h-full flex flex-col justify-center items-center'>
-                <div className='w-full h-[20%] flex flex-col justify-center items-center gap-1'>
-                    <h1 className='text-4xl font-bold'>Why Choose Us</h1>
-                    <p className='text-xl'>Experience The Exotic & Luxury Car Collection By Instant Luxury Rentals</p>
+                <div className='px-2 lg:px-0 w-full h-[10%] flex flex-col justify-center items-center gap-1'>
+                    <h1 className='text-2xl lg:text-4xl font-bold'>Why Choose Us</h1>
+                    <p className='text-lg lg:text-xl'>Experience The Exotic & Luxury Car Collection By Instant Luxury Rentals</p>
                 </div>
-                <div className='w-full h-[80%] flex justify-between items-center pt-5 gap-5'>
-                    <div className='w-[33%] h-full flex flex-col justify-center items-center'>
+                <div className='w-full h-[90%] flex flex-col lg:flex-row justify-between items-center pt-5 gap-5'>
+                    <div className='w-full lg:w-[33%] h-[33%] lg:h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-[70vh] flex justify-center items-center'>
                             <img src={SportsCar} alt="sports_car" width={160} className='-mt-4' />
                         </div>
@@ -26,7 +26,7 @@ const WhyUs = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='w-[33%] h-full flex flex-col justify-center items-center'>
+                    <div className='w-full lg:w-[33%] h-[33%] lg:h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-[70vh] flex justify-center items-center'>
                             <img src={HandShake} alt="handshake" width={120} />
                         </div>
@@ -39,7 +39,7 @@ const WhyUs = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='w-[33%] h-full flex flex-col justify-center items-center'>
+                    <div className='w-full lg:w-[33%] h-[33%] lg:h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-[70vh] flex justify-center items-center'>
                             <img src={Support} alt="support" width={100} />
                         </div>

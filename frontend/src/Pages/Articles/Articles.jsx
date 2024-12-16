@@ -17,20 +17,20 @@ const Articles = () => {
     return (
         <div className='w-full h-full flex justify-center items-center py-5'>
             <div className='w-[80vw] h-full flex flex-col justify-between items-center'>
-                <div className='w-full h-[20%] flex flex-col justify-center items-center gap-2'>
-                    <h1 className='text-5xl font-bold text-black'>
+                <div className='w-full h-[20%] flex flex-col justify-center items-center gap-5'>
+                    <h1 className='text-3xl lg:text-5xl font-bold text-black text-center'>
                         Articles & Tips
                     </h1>
-                    <p className='text-xl text-gray-500 font-semibold text-center'>
+                    <p className='text-lg lg:text-xl text-gray-500 font-semibold text-center'>
                         Choose from our selection of high-end, late model, exotic sports cars, sedans and SUVs from some of the world's top luxury car manufacturers.
                     </p>
                 </div>
-                <div className='w-full h-full flex justify-between items-center gap-10'>
+                <div className='w-full h-full flex flex-col lg:flex-row justify-between items-center gap-10'>
                     {articles.map((article, index) => {
                         return (
                             <div
                                 key={index}
-                                className='w-[33%] h-[80%] flex flex-col justify-center items-center rounded-2xl overflow-hidden hover:shadow-[0_0_50px_0px_rgba(0,0,0,0.4)] shadow-black hover:cursor-pointer hover:translate-y-[-6px] transition ease-in-out duration-300 border'
+                                className='w-full lg:w-[33%] h-[80%] flex flex-col justify-center items-center rounded-2xl overflow-hidden hover:shadow-[0_0_50px_0px_rgba(0,0,0,0.4)] shadow-black hover:cursor-pointer hover:translate-y-[-6px] transition ease-in-out duration-300 border'
                             >
                                 <div className='w-full h-1/2'>
                                     <img src={article.img} alt={`article_${index + 1}`} className='w-full h-full object-cover' />

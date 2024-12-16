@@ -5,8 +5,13 @@ import CarsBgVideo from '../../assets/carsVideo.mp4';
 const GetQuote = () => {
     return (
         <div className='relative w-full h-full flex justify-center items-center text-white overflow-hidden'>
-            <div className='w-full h-full absolute z-0'>
-                <video autoPlay loop muted className="background-video">
+            <div className="w-full h-full absolute z-0">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    className="background-video"
+                >
                     <source src={CarsBgVideo} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -19,7 +24,7 @@ const GetQuote = () => {
                     <h1 className='text-4xl font-bold'>
                         Our Fleet, Your Fleet
                     </h1>
-                    <p className='text-lg font-semibold text-gray-300'>
+                    <p className='pt-5 text-lg font-semibold text-gray-300'>
                         We know the difference is in the details and that’s why our exotic and luxury car rental services, in the tourism
                         and business industry, stand out for their quality and good taste, to offer you a unique experience
                     </p>
@@ -28,7 +33,7 @@ const GetQuote = () => {
                     Call Now (877) 736-8553
                 </h2>
                 <button
-                    className='w-[12vw] h-12 rounded-lg bg-customYellow text-white hover:bg-[#FFC000]'
+                    className='w-[40vw] md:[25vw] lg:w-[12vw] h-12 rounded-lg bg-customYellow text-white hover:bg-[#FFC000]'
                 >
                     Request a Quote
                 </button>

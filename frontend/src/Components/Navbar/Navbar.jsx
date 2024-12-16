@@ -35,19 +35,19 @@ const Navbar = () => {
     return (
         <div className='w-full h-[15vh] relative'>
             {/* Top Black Bar */}
-            <div className={`w-full h-[5vh] bg-black flex justify-center items-center ${isScrolled && `hidden`}`}>
-                <div className='w-[80vw] h-full text-white text-sm font-semibold flex justify-between items-center'>
-                    <div className='w-[40%] h-full flex justify-between items-center'>
-                        <div className='w-1/2 h-full flex items-center justify-start gap-1'>
+            <div className={`w-full h-[10vh] lg:h-[5vh] bg-black flex justify-center items-center ${isScrolled && `hidden`}`}>
+                <div className='w-full lg:w-[80vw] px-5 lg:px-0 h-full text-white text-sm font-semibold flex flex-col lg:flex-row justify-between items-center'>
+                    <div className='w-full lg:w-[40%] h-full flex justify-between items-center'>
+                        <div className='w-1/2 h-full flex items-center justify-center lg:justify-start gap-1'>
                             <img src={Mobile} alt="mobile" width={20} />
                             {mobileNumber}
                         </div>
-                        <div className='w-1/2 h-full flex items-center justify-start gap-1'>
+                        <div className='w-1/2 h-full flex items-center justify-center lg:justify-start gap-1'>
                             <img src={Clock} alt="clock" width={20} />
                             {timmings}
                         </div>
                     </div>
-                    <div className='w-[60%] h-full flex justify-end items-center gap-5'>
+                    <div className='w-full lg:w-[60%] h-full flex justify-center lg:justify-end items-center gap-5'>
                         <div
                             onClick={() => {
                                 window.open(facebookLink, "_blank");
@@ -80,12 +80,11 @@ const Navbar = () => {
                     </div>
                     <div className='w-1/2 h-full flex justify-end items-center font-semibold'>
                         <ul className='flex justify-end items-center gap-5'>
-                            <li>VEHICLE</li>
-                            <li>SERVICES</li>
-                            <li>COMPANY</li>
-                            <li>HOME</li>
+                            <li className='hidden lg:block'>VEHICLE</li>
+                            <li className='hidden lg:block'>SERVICES</li>
+                            <li className='hidden lg:block'>COMPANY</li>
+                            <li className='hidden lg:block'>HOME</li>
                             <li className='hover:cursor-pointer' onClick={() => setSideMenu(true)}><img src={Menu} alt="menu" className='invert' width={20} /></li>
-                            <li className='bg-customYellow rounded-full p-1'><img src={Cart} alt="cart" className='invert' width={16} /></li>
                         </ul>
                     </div>
                 </div>

@@ -17,14 +17,14 @@ const Footer = () => {
     return (
         <div className='w-full h-full flex justify-center items-center text-white'>
             <div className='w-[80vw] h-full pt-16'>
-                <div className='w-full h-[90%] flex justify-between items-center gap-10'>
-                    <div className='w-[20%] h-full flex flex-col justify-start items-start gap-2'>
+                <div className='w-full h-[90%] flex flex-col lg:flex-row justify-between items-center gap-10'>
+                    <div className='w-full lg:w-[20%] h-[45%] lg:h-full flex flex-col justify-start items-start gap-2'>
                         <h1 className='text-xl font-bold'>About Us</h1>
                         <p>
                             From exotic sports cars to luxury sedans and SUVs, Instant Luxury Rentals features one of the largest selections of exotic and premium luxury vehicles from manufacturers around the world including Lamborghini, Bugatti, Aston Martin, Jaguar, Alfa Romeo, BMW, Mercedes-Benz, Audi, Koenigsegg, Tesla, Ferrari, Maserati, Porsche, Bentley, Range Rover, Rolls-Royce, Land Rover, Cadillac, Fiat, McLaren, Mini, Lexus, Tata Motors, Peugeot, Pagani and more.
                         </p>
                     </div>
-                    <div className='w-[20%] h-full flex flex-col justify-center items-start gap-2'>
+                    <div className='w-full lg:w-[20%] h-[45%] lg:h-full flex flex-col justify-center items-start gap-2'>
                         <div className='w-full h-1/2 flex flex-col justify-start items-start'>
                             <h1 className='text-xl font-bold'>Contact Information</h1>
                             <ul className='flex flex-col justify-start items-start gap-2 pt-5'>
@@ -64,23 +64,23 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className='w-[20%] h-full flex flex-col justify-start items-start gap-2'>
+                    <div className='hidden lg:flex w-full lg:w-[20%] h-full flex-col justify-start items-start gap-2'>
 
                     </div>
-                    <div className='w-[40%] h-full flex flex-col justify-center items-start gap-2'>
+                    <div className='hidden lg:flex w-full lg:w-[20%] h-full flex-col justify-center items-start gap-2'>
                         {/* Free col */}
                     </div>
                 </div>
                 <div className='w-full h-[10%]'>
                     <hr />
-                    <div className='flex justify-between items-center'>
-                        <div className='w-1/2 flex justify-start items-center py-2'>
+                    <div className='flex flex-col lg:flex-row justify-between items-center'>
+                        <div className='text-center lg:text-start w-full lg:w-1/2 flex justify-start items-center py-2'>
                             <h1>
                                 ©2019-2024 Copyright Instant Luxury Rentals | All Rights Reserved.
                             </h1>
                         </div>
-                        <div className='w-1/2 flex justify-end items-center'>
-                            <ul className='flex justify-end items-center gap-3'>
+                        <div className='w-full lg:w-1/2 flex justify-end items-center'>
+                            <ul className='flex justify-center lg:justify-end items-center gap-3 text-center'>
                                 <li>Terms of Use</li>
                                 <li>Privacy Policy</li>
                                 <li>Cookie Policy</li>

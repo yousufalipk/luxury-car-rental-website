@@ -55,7 +55,7 @@ const UnAuthorized = () => {
                             animation: `${popupClosing ? "closePopup" : "openPopup"
                                 } 0.5s ease-in-out forwards`,
                         }}
-                        className="side-box w-[30%] h-full bg-black bg-opacity-80 flex flex-col items-center transition-transform duration-300 ease-in-out"
+                        className="side-box w-[100%] lg:w-[30%] h-full bg-black bg-opacity-80 flex flex-col items-center transition-transform duration-300 ease-in-out"
                     >
                         <div className='w-full h-[20vh] flex justify-end items-center p-10'>
                             <button
@@ -125,27 +125,27 @@ const UnAuthorized = () => {
             </section>
 
             {/* Cars */}
-            <section className='w-full h-[200vh] py-20 flex justify-center items-center'>
+            <section className='w-full h-[400vh] lg:h-[200vh] py-20 flex justify-center items-center'>
                 <Cars />
             </section>
 
             {/* Get Quote */}
-            <section className='w-full h-[80vh] pt-10'>
+            <section className='w-full h-[100vh] lg-[80vh] pt-10'>
                 <GetQuote />
             </section>
 
             {/* Why Choose Us */}
-            <section className='w-full h-[90vh] bg-customYellow'>
+            <section className='w-full h-[150vh] lg:h-[90vh] bg-customYellow'>
                 <WhyUs />
             </section>
 
             {/* Articles */}
-            <section className='w-full h-[120vh] pt-10'>
+            <section className='w-full h-[300vh] lg:h-[120vh] pt-10'>
                 <Articles />
             </section>
 
             {/* Footer */}
-            <div className='w-full h-[90vh] bg-black'>
+            <div className='w-full h-[160vh] lg:h-[90vh] bg-black py-12 lg:py-12'>
                 <Footer />
             </div>
         </div>

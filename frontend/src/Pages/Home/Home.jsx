@@ -50,10 +50,10 @@ const Home = () => {
             ></div>
 
             <div className={`absolute w-full h-full flex flex-col items-center justify-center gap-5 text-white text-2xl font-semibold z-10 ${textAnimations[currentSlide]}`}>
-                <p className="text-8xl text-center font-bold">
+                <p className="px-10 lg:px-0 text-4xl md:text-6xl lg:text-8xl text-center font-bold">
                     {slides[currentSlide].text1}
                 </p>
-                <p className="font-bold">{slides[currentSlide].text2}</p>
+                <p className="px-16 lg:px-0 text-sm md:text-md lg:text-lg font-bold text-center">{slides[currentSlide].text2}</p>
             </div>
         </div>
     );

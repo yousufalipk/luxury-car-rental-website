@@ -31,15 +31,15 @@ const Cars = () => {
 
     return (
         <div className='w-[80vw] h-full'>
-            <div className='w-full h-[15vh] flex flex-col justify-center items-center gap-5'>
-                <h1 className='text-5xl font-bold text-black'>
+            <div className='px-2 lg:px-0 w-full h-[15vh] flex flex-col justify-center items-center gap-5'>
+                <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold text-black text-center'>
                     READY TO GET STARTED?
                 </h1>
-                <p className='text-xl text-gray-500 font-semibold text-center'>
+                <p className='text-md: md:text-md lg:text-xl text-gray-500 font-semibold text-center'>
                     Choose from our selection of high-end, late model, exotic sports cars, sedans and SUVs from some of the world's top luxury car manufacturers.
                 </p>
             </div>
-            <div className='w-full h-full grid grid-cols-3 py-10 gap-10'>
+            <div className='pt-16 w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-10'>
                 {carsData.map((car, index) => {
                     return (
                         <div
