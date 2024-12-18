@@ -6,11 +6,12 @@ import Facebook from '../../assets/facebook.svg';
 import Instagram from '../../assets/insta.svg';
 import Twitter from '../../assets/twitter.svg';
 import Menu from '../../assets/menu.svg';
+import Logo from '../../assets/logo.png';
 import Cart from '../../assets/cart.svg';
 
 import { useUser } from '../../context';
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
     const { setSideMenu, setIsScrolled, isScrolled } = useUser();
 
     const mobileNumber = '1.877.736.8553';
@@ -76,14 +77,31 @@ const Navbar = () => {
             <div className={`w-full h-[10vh] bg-black ${isScrolled ? `bg-opacity-100` : `bg-opacity-40`}`}>
                 <div className='w-[80vw] h-full mx-auto flex justify-between items-center text-white'>
                     <div className='w-1/2 h-full flex justify-start items-center text-2xl font-semibold'>
-                        Logo Here
+                        {/* Logo Here */}
+                        <img src={Logo} alt="BURAQ_LUXURY_TRAVEL" />
                     </div>
                     <div className='w-1/2 h-full flex justify-end items-center font-semibold'>
                         <ul className='flex justify-end items-center gap-5'>
-                            <li className='hidden lg:block'>VEHICLE</li>
-                            <li className='hidden lg:block'>SERVICES</li>
-                            <li className='hidden lg:block'>COMPANY</li>
-                            <li className='hidden lg:block'>HOME</li>
+                            <li
+                                onClick={() => {
+                                    onNavigate("cars");
+                                }}
+                                className='hidden lg:block hover:cursor-pointer'>VEHICLE</li>
+                            <li
+                                onClick={() => {
+                                    onNavigate("whyUs");
+                                }}
+                                className='hidden lg:block hover:cursor-pointer'>SERVICES</li>
+                            <li
+                                onClick={() => {
+                                    onNavigate("getQuote");
+                                }}
+                                className='hidden lg:block hover:cursor-pointer'>COMPANY</li>
+                            <li
+                                onClick={() => {
+                                    onNavigate("home");
+                                }}
+                                className='hidden lg:block hover:cursor-pointer'>HOME</li>
                             <li className='hover:cursor-pointer' onClick={() => setSideMenu(true)}><img src={Menu} alt="menu" className='invert' width={20} /></li>
                         </ul>
                     </div>

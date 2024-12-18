@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customYellow: '#FFC500',
+        customYellow: '#006C35',
       },
       animation: {
         typing: 'typing 2s steps(30) 1s forwards',

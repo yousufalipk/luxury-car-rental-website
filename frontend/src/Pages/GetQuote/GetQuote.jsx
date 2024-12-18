@@ -33,7 +33,7 @@ const GetQuote = () => {
                     Call Now (877) 736-8553
                 </h2>
                 <button
-                    className='w-[40vw] md:[25vw] lg:w-[12vw] h-12 rounded-lg bg-customYellow text-white hover:bg-[#FFC000]'
+                    className='w-[40vw] md:[25vw] lg:w-[12vw] h-12 rounded-lg bg-customYellow text-white hover:bg-[#11492c]'
                 >
                     Request a Quote
                 </button>

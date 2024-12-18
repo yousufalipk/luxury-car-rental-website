@@ -15,7 +15,7 @@ const WhyUs = () => {
                 <div className='w-full h-[90%] flex flex-col lg:flex-row justify-between items-center pt-5 gap-5'>
                     <div className='w-full lg:w-[33%] h-[33%] lg:h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-[70vh] flex justify-center items-center'>
-                            <img src={SportsCar} alt="sports_car" width={160} className='-mt-4' />
+                            <img src={SportsCar} alt="sports_car" width={160} className='-mt-4 invert' />
                         </div>
                         <div className='w-full h-full'>
                             <h1 className='text-xl font-bold'>
@@ -28,7 +28,7 @@ const WhyUs = () => {
                     </div>
                     <div className='w-full lg:w-[33%] h-[33%] lg:h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-[70vh] flex justify-center items-center'>
-                            <img src={HandShake} alt="handshake" width={120} />
+                            <img src={HandShake} alt="handshake" width={120} className='invert' />
                         </div>
                         <div className='w-full h-full'>
                             <h1 className='text-xl font-bold'>
@@ -41,7 +41,7 @@ const WhyUs = () => {
                     </div>
                     <div className='w-full lg:w-[33%] h-[33%] lg:h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-[70vh] flex justify-center items-center'>
-                            <img src={Support} alt="support" width={100} />
+                            <img src={Support} alt="support" width={100} className='invert' />
                         </div>
                         <div className='w-full h-full'>
                             <h1 className='text-xl font-bold'>

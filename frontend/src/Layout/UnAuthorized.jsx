@@ -15,6 +15,7 @@ import Twitter from '../assets/twitter.svg';
 import Instagram from '../assets/insta.svg';
 import Angle from '../assets/angle.svg';
 
+
 const UnAuthorized = () => {
 
     const facebookLink = 'https://www.facebook.com';
@@ -26,7 +27,14 @@ const UnAuthorized = () => {
 
     useEffect(() => {
         console.log('Is Scorlled', isScrolled);
-    }, [isScrolled])
+    }, [isScrolled]);
+
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className="w-full h-[100vh] relative">
@@ -115,37 +123,37 @@ const UnAuthorized = () => {
             )}
 
             {/* Navbar */}
-            <div className='w-full h-[15vh] fixed top-0 z-20'>
-                <Navbar />
+            <div id='navbar' className='w-full h-[15vh] fixed top-0 z-20'>
+                <Navbar onNavigate={scrollToSection} />
             </div>
 
             {/* Home */}
-            <section className='w-full h-[100vh] bg-white'>
+            <section id='home' className='w-full h-[100vh] bg-white'>
                 <Home />
             </section>
 
             {/* Cars */}
-            <section className='w-full h-[400vh] lg:h-[200vh] py-20 flex justify-center items-center'>
+            <section id='cars' className='w-full h-[400vh] lg:h-[200vh] py-20 flex justify-center items-center'>
                 <Cars />
             </section>
 
             {/* Get Quote */}
-            <section className='w-full h-[100vh] lg-[80vh] pt-10'>
+            <section id='getQuote' className='w-full h-[100vh] lg-[80vh] pt-10'>
                 <GetQuote />
             </section>
 
             {/* Why Choose Us */}
-            <section className='w-full h-[150vh] lg:h-[90vh] bg-customYellow'>
+            <section id='whyUs' className='w-full h-[150vh] lg:h-[90vh] bg-customYellow'>
                 <WhyUs />
             </section>
 
             {/* Articles */}
-            <section className='w-full h-[300vh] lg:h-[120vh] pt-10'>
+            <section id='articles' className='w-full h-[300vh] lg:h-[120vh] pt-10'>
                 <Articles />
             </section>
 
             {/* Footer */}
-            <div className='w-full h-[160vh] lg:h-[90vh] bg-black py-12 lg:py-12'>
+            <div id='footer' className='w-full h-[160vh] lg:h-[90vh] bg-black py-12 lg:py-12'>
                 <Footer />
             </div>
         </div>
