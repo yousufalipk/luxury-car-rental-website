@@ -36,6 +36,16 @@ const UnAuthorized = () => {
 
     return (
         <div className="w-full h-[100vh] relative">
+
+            {/* Whatsapp Button */}
+            <div
+                onClick={() => {
+                    window.open("https://api.whatsapp.com/send?phone=923021223335", "_blank");
+                }}
+                className='animate-fadeInOutBounce hover:animate-none hover:cursor-pointer fixed rounded-full bottom-5 left-5 z-30 bg-[#25D366] p-3 flex justify-center items-center transform transition-transform duration-200 hover:translate-y-[-4px]'>
+                <img src={Whatsapp} alt="whatsapp" className='invert' width={25} />
+            </div>
+
             {isScrolled && (
                 <div
                     onClick={() => {

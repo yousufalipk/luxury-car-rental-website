@@ -77,7 +77,7 @@ const CarCard = ({ car }) => {
                 <div className="w-full h-[7vh] flex justify-between items-center">
                     <h1 className="w-[60%] h-full justify-start font-bold">{car.name}</h1>
                     <div className="w-[30%] h-full flex flex-col justify-end items-end">
-                        <p className="font-bold">${car.price}</p>
+                        <p className="font-bold">{car.price} SAR</p>
                         <p className="font-thin">PerDay</p>
                     </div>
                 </div>

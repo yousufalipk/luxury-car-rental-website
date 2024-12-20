@@ -14,6 +14,8 @@ module.exports = {
         textGlow: 'textGlow 1.5s ease-in-out infinite',
         fadeInLetters: 'fadeInLetters 3s ease-out forwards',
         slideUpText: 'slideUpText 1s ease-out forwards',
+        bouncing: 'bouncing 1s ease infinite',
+        fadeInOutBounce: 'fadeInOutBounce 2s ease infinite',
       },
       keyframes: {
         typing: {
@@ -37,6 +39,16 @@ module.exports = {
         slideUpText: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        bouncing: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        fadeInOutBounce: {
+          '0%, 100%': { opacity: '0.5', transform: 'translateY(0)' },
+          '25%': { opacity: '1', transform: 'translateY(-10px)' },
+          '50%': { opacity: '0.5', transform: 'translateY(0)' },
+          '75%': { opacity: '1', transform: 'translateY(-10px)' },
         },
       },
     },

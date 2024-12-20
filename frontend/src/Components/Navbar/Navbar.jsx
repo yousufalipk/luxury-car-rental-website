@@ -30,15 +30,17 @@ const Navbar = ({ onNavigate }) => {
     return (
         <div className='w-full h-[15vh] relative'>
             {/* Top Black Bar */}
-            <div className={`w-full h-[10vh] lg:h-[5vh] bg-customYellow flex justify-center items-center ${isScrolled && `hidden`}`}>
-                <div className='w-full lg:w-[80vw] px-5 lg:px-0 h-full text-white text-sm font-semibold flex flex-col lg:flex-row justify-between items-center'>
-                    <div className='w-full lg:w-[40%] h-full flex justify-between items-center'>
-                        <div className='w-1/2 h-full flex items-center justify-center lg:justify-start gap-1'>
+            <div className={`w-full h-[5vh] bg-customYellow flex justify-center items-center ${isScrolled && `hidden`}`}>
+                <div className='w-full lg:w-[80vw] px-5 lg:px-0 h-full text-white text-xs md:text-md font-semibold flex flex-row justify-between items-center'>
+
+                    <div className='w-1/2 h-full flex justify-between items-center'>
+                        <div className='w-full h-full flex items-center justify-center lg:justify-start gap-1'>
                             <img src={Clock} alt="clock" width={20} className='invert' />
                             {timmings}
                         </div>
                     </div>
-                    <div className='w-full lg:w-[60%] h-full flex justify-center lg:justify-end items-center gap-5'>
+
+                    <div className='w-1/2 h-full flex justify-center lg:justify-end items-center gap-5'>
                         <div
                             onClick={() => {
                                 window.open("https://api.whatsapp.com/send?phone=923021223335", "_blank");
