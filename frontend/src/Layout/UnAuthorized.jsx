@@ -16,7 +16,7 @@ import Angle from '../assets/angle.svg';
 
 const UnAuthorized = () => {
 
-    const { sideMenu, setSideMenu, isScrolled } = useUser();
+    const { sideMenu, setSideMenu, isScrolled, whatsappApi } = useUser();
     const [popupClosing, setPopupClosing] = useState(false);
 
     const scrollToSection = (id) => {
@@ -40,7 +40,7 @@ const UnAuthorized = () => {
             {/* Whatsapp Button */}
             <div
                 onClick={() => {
-                    window.open("https://api.whatsapp.com/send?phone=923021223335", "_blank");
+                    window.open(whatsappApi, "_blank");
                 }}
                 className='animate-fadeInOutBounce hover:animate-none hover:cursor-pointer fixed rounded-full bottom-5 left-5 z-30 bg-[#25D366] p-3 flex justify-center items-center transform transition-transform duration-200 hover:translate-y-[-4px]'>
                 <img src={Whatsapp} alt="whatsapp" className='invert' width={25} />
@@ -136,7 +136,7 @@ const UnAuthorized = () => {
                             <ul className='flex justify-start items-center gap-5 px-10'>
                                 <li
                                     onClick={() => {
-                                        window.open("https://api.whatsapp.com/send?phone=923021223335", "_blank");
+                                        window.open(whatsappApi, "_blank");
                                     }}
                                     className='hover:cursor-pointer hover:-translate-y-[3px] hover:scale-125 transition-transform duration-200 ease-out'
                                 >

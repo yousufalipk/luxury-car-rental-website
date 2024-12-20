@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-import Mobile from '../../assets/mobile.svg';
 import Clock from '../../assets/clock.svg';
 import Menu from '../../assets/menu.svg';
 import Logo from '../../assets/logo.png';
@@ -9,7 +8,7 @@ import Whatsapp from '../../assets/whatsapp.svg';
 import { useUser } from '../../context';
 
 const Navbar = ({ onNavigate }) => {
-    const { setSideMenu, setIsScrolled, isScrolled } = useUser();
+    const { setSideMenu, setIsScrolled, isScrolled, whatsappApi } = useUser();
 
     const number = '+966-54-520-6027';
     const timmings = '5:00am - 11:00pm';
@@ -43,7 +42,7 @@ const Navbar = ({ onNavigate }) => {
                     <div className='w-1/2 h-full flex justify-center lg:justify-end items-center gap-5'>
                         <div
                             onClick={() => {
-                                window.open("https://api.whatsapp.com/send?phone=923021223335", "_blank");
+                                window.open(whatsappApi, "_blank");
                             }}
                             className='flex items-center justify-center hover:cursor-pointer hover:-translate-y-[3px] hover:scale-125 transition-transform duration-200 ease-out gap-1'>
                             <img src={Whatsapp} alt="whatsapp" className='invert' width={16} />

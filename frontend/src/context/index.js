@@ -12,6 +12,8 @@ export const UserProvider = (props) => {
     const [sideMenu, setSideMenu] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
+    const whatsappAPi = 'https://api.whatsapp.com/send?phone=923021223335';
+
 
     return (
         <UserContext.Provider value={{
@@ -19,7 +21,8 @@ export const UserProvider = (props) => {
             setSideMenu,
             sideMenu,
             setIsScrolled,
-            isScrolled
+            isScrolled,
+            whatsappAPi
         }}
         >
             {props.children}
