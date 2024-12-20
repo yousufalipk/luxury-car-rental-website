@@ -16,7 +16,8 @@ const Footer = () => {
 
     return (
         <div className='w-full h-full flex justify-center items-center text-white'>
-            <div className='w-[80vw] h-full pt-16'>
+            <div className='w-[80vw] h-full pt-2'>
+                {/*
                 <div className='w-full h-[90%] flex flex-col lg:flex-row justify-between items-center gap-10'>
                     <div className='w-full lg:w-[20%] h-[45%] lg:h-full flex flex-col justify-start items-start gap-2'>
                         <h1 className='text-xl font-bold'>About Us</h1>
@@ -68,17 +69,19 @@ const Footer = () => {
 
                     </div>
                     <div className='hidden lg:flex w-full lg:w-[20%] h-full flex-col justify-center items-start gap-2'>
-                        {/* Free col */}
+                        
                     </div>
                 </div>
-                <div className='w-full h-[10%]'>
-                    <hr />
+                */}
+                <div className='w-full h-[100%]'>
+                    {/* <hr /> */}
                     <div className='flex flex-col lg:flex-row justify-between items-center'>
                         <div className='text-center lg:text-start w-full lg:w-1/2 flex justify-start items-center py-2'>
                             <h1>
-                                ©2019-2024 Copyright Instant Luxury Rentals | All Rights Reserved.
+                                ©2024 Copyright <span className='text-customYellow'>BURAQ</span> Luxury Rentals | All Rights Reserved.
                             </h1>
                         </div>
+                        {/*
                         <div className='w-full lg:w-1/2 flex justify-end items-center'>
                             <ul className='flex justify-center lg:justify-end items-center gap-3 text-center'>
                                 <li>Terms of Use</li>
@@ -87,10 +90,11 @@ const Footer = () => {
                                 <li>Rental Policies</li>
                             </ul>
                         </div>
+                        */}
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 

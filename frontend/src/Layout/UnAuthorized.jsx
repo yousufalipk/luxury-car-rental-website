@@ -22,7 +22,7 @@ const UnAuthorized = () => {
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
-            const offset = window.innerHeight * 0.09;
+            const offset = window.innerHeight * 0.1;
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
             const targetPosition = elementPosition - offset;
 
@@ -166,12 +166,14 @@ const UnAuthorized = () => {
             </section>
 
             {/* Articles */}
+            {/*
             <section id='articles' className='w-full h-[300vh] lg:h-[120vh] pt-10'>
                 <Articles />
             </section>
+            */}
 
             {/* Footer */}
-            <div id='footer' className='w-full h-[160vh] lg:h-[90vh] bg-black py-12 lg:py-12'>
+            <div id='footer' className='w-full h-[10vh] bg-black'>
                 <Footer />
             </div>
         </div>

@@ -10,7 +10,7 @@ const WhyUs = () => {
             <div className='w-[80vw] h-full flex flex-col justify-center items-center'>
                 <div className='px-2 lg:px-0 w-full h-[10%] flex flex-col justify-center items-center gap-1'>
                     <h1 className='text-2xl lg:text-4xl font-bold'>Why Choose Us</h1>
-                    <p className='text-lg lg:text-xl'>Experience The Exotic & Luxury Car Collection By Instant Luxury Rentals</p>
+                    <p className='text-lg lg:text-xl'>Experience The Exotic & Luxury Car Collection By Buraq Luxury Travel</p>
                 </div>
                 <div className='w-full h-[90%] flex flex-col lg:flex-row justify-between items-center pt-5 gap-5'>
                     <div className='w-full lg:w-[33%] h-[33%] lg:h-full flex flex-col justify-center items-center'>
@@ -19,10 +19,10 @@ const WhyUs = () => {
                         </div>
                         <div className='w-full h-full'>
                             <h1 className='text-xl font-bold'>
-                                Variety of Car Brands
+                                Pick-up and Drop-off
                             </h1>
                             <p>
-                                Lamborghini, Bugatti, Aston Martin, Jaguar, Alfa Romeo, Mercedes Benz, Audi, Koenigsegg, Tesla, Ferrari, Maserati, Porsche, Bentley, Range Rover, Rolls-Royce, and more.
+                                Pick-up, Drop-off, Airport Transfers, Event Transport, Business Travel, VIP Transfers, Luxury Road Trips, Personalized Journeys, Premium Service, Comfort, Elegance, Convenience, and more.
                             </p>
                         </div>
                     </div>

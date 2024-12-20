@@ -10,7 +10,6 @@ import vanB2 from '../../assets/cars/vanB2.jpg';
 import vanB3 from '../../assets/cars/vanB3.jpg';
 import vanB4 from '../../assets/cars/vanB4.jpg';
 
-import TransimmsionLogo from '../../assets/transmission.svg';
 import SuitCaseLogo from '../../assets/suitcase.svg';
 import PersonLogo from '../../assets/person.svg';
 
@@ -18,19 +17,17 @@ const Cars = () => {
     const carsData = [
         {
             images: [vanA1, vanA2, vanA3, vanA4, vanA5],
-            name: 'DRIVE YOUR DREAMS',
-            passengers: 2,
+            name: 'Mercedes Vito Brabus',
+            passengers: 5,
             trunk: 1,
-            transmission: 'auto',
             price: 1000
         },
         {
             images: [vanB1, vanB2, vanB3, vanB4],
-            name: 'FEEL THE LUXURY',
-            passengers: 4,
+            name: 'Mercedes sprinter LWB',
+            passengers: '11+',
             trunk: 2,
-            transmission: 'manual',
-            price: 4000
+            price: 1800
         }
     ];
 
@@ -86,17 +83,13 @@ const CarCard = ({ car }) => {
                 </div>
                 <div className="w-full h-[7vh] flex justify-between items-center">
                     <ul className="w-full h-full flex justify-start items-center gap-2 text-sm">
-                        <li className="w-7 flex flex-col items-center justify-between">
+                        <li className="w-7 flex flex-col items-center justify-center text-center">
                             <img src={PersonLogo} alt="passengers" width={20} className="invert" />
                             <h1>{car.passengers}</h1>
                         </li>
-                        <li className="w-7 flex flex-col items-center justify-between">
+                        <li className="w-7 flex flex-col items-center justify-center text-center">
                             <img src={SuitCaseLogo} alt="trunks" width={20} className="invert" />
                             <h1>{car.trunk}</h1>
-                        </li>
-                        <li className="w-7 flex flex-col items-center justify-between">
-                            <img src={TransimmsionLogo} alt="transmission" width={20} className="invert" />
-                            <h1 className="capitalize">{car.transmission}</h1>
                         </li>
                     </ul>
                 </div>

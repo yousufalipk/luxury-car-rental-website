@@ -34,10 +34,6 @@ const Navbar = ({ onNavigate }) => {
                 <div className='w-full lg:w-[80vw] px-5 lg:px-0 h-full text-white text-sm font-semibold flex flex-col lg:flex-row justify-between items-center'>
                     <div className='w-full lg:w-[40%] h-full flex justify-between items-center'>
                         <div className='w-1/2 h-full flex items-center justify-center lg:justify-start gap-1'>
-                            <img src={Mobile} alt="mobile" width={20} className='invert' />
-                            {number}
-                        </div>
-                        <div className='w-1/2 h-full flex items-center justify-center lg:justify-start gap-1'>
                             <img src={Clock} alt="clock" width={20} className='invert' />
                             {timmings}
                         </div>
