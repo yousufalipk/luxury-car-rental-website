@@ -6,8 +6,8 @@ import HandShake from '../../assets/handshake.svg';
 
 const WhyUs = () => {
     return (
-        <div className='w-full h-full flex justify-center items-center text-white text-center py-16 lg:py-24'>
-            <div className='w-[80vw] h-full flex flex-col justify-center items-center'>
+        <div className='w-full h-full flex justify-center items-center text-white text-center'>
+            <div className='w-[80vw] h-[150vh] lg:h-[60vh] flex flex-col justify-center items-center'>
                 <div className='px-2 lg:px-0 w-full h-[10%] flex flex-col justify-center items-center gap-1'>
                     <h1 className='text-2xl lg:text-4xl font-bold'>Why Choose Us</h1>
                     <p className='text-lg lg:text-xl'>Experience The Exotic & Luxury Car Collection By Buraq Luxury Travel</p>

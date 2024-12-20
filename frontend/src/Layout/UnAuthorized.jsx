@@ -161,7 +161,7 @@ const UnAuthorized = () => {
             */}
 
             {/* Why Choose Us */}
-            <section id='whyUs' className='w-full h-[150vh] lg:h-[90vh] bg-customYellow'>
+            <section id='whyUs' className='w-full h-[180vh] lg:h-[100vh] bg-customYellow'>
                 <WhyUs />
             </section>
 
