@@ -17,6 +17,10 @@ import Angle from '../assets/angle.svg';
 const UnAuthorized = () => {
 
     const { sideMenu, setSideMenu, isScrolled, whatsappApi } = useUser();
+
+    useEffect(() => {
+        console.log('Whatsapp', whatsappApi);
+    }, [whatsappApi])
     const [popupClosing, setPopupClosing] = useState(false);
 
     const scrollToSection = (id) => {

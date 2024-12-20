@@ -12,7 +12,7 @@ export const UserProvider = (props) => {
     const [sideMenu, setSideMenu] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    const whatsappAPi = 'https://api.whatsapp.com/send?phone=923021223335';
+    const whatsappApi = 'https://api.whatsapp.com/send?phone=923021223335';
 
 
     return (
@@ -22,7 +22,7 @@ export const UserProvider = (props) => {
             sideMenu,
             setIsScrolled,
             isScrolled,
-            whatsappAPi
+            whatsappApi
         }}
         >
             {props.children}
