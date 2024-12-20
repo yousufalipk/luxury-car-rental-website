@@ -84,11 +84,6 @@ const Navbar = ({ onNavigate }) => {
                                 className='hidden lg:block hover:cursor-pointer'>SERVICES</li>
                             <li
                                 onClick={() => {
-                                    onNavigate("getQuote");
-                                }}
-                                className='hidden lg:block hover:cursor-pointer'>COMPANY</li>
-                            <li
-                                onClick={() => {
                                     onNavigate("home");
                                 }}
                                 className='hidden lg:block hover:cursor-pointer'>HOME</li>

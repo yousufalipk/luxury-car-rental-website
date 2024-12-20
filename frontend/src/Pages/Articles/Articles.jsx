@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Car1 from '../../assets/cars/1.jpg';
-import Car2 from '../../assets/cars/2.jpg';
-import Car3 from '../../assets/cars/3.jpg';
+import Car1 from '../../assets/cars/vanA1.jpg';
+import Car2 from '../../assets/cars/vanA2.jpg';
+import Car3 from '../../assets/cars/vanA3.jpg';
 
 const Articles = () => {
     const navigate = useNavigate();

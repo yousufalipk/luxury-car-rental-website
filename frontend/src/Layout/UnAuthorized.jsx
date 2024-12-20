@@ -112,19 +112,6 @@ const UnAuthorized = () => {
                                             setSideMenu(false);
                                             setPopupClosing(false);
                                         }, 500);
-                                        scrollToSection('getQuote');
-                                    }}
-                                    className='hover:text-customYellow hover:cursor-pointer'
-                                >
-                                    COMPANY
-                                </li>
-                                <li
-                                    onClick={() => {
-                                        setPopupClosing(true);
-                                        setTimeout(() => {
-                                            setSideMenu(false);
-                                            setPopupClosing(false);
-                                        }, 500);
                                         scrollToSection('home');
                                     }}
                                     className='hover:text-customYellow hover:cursor-pointer'
@@ -167,9 +154,11 @@ const UnAuthorized = () => {
             </section>
 
             {/* Get Quote */}
+            {/*
             <section id='getQuote' className='w-full h-[100vh] lg-[80vh] pt-10'>
                 <GetQuote />
             </section>
+            */}
 
             {/* Why Choose Us */}
             <section id='whyUs' className='w-full h-[150vh] lg:h-[90vh] bg-customYellow'>

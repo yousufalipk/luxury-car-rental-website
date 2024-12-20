@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
 
-import Car1 from '../../assets/cars/1.jpg';
-import Car2 from '../../assets/cars/2.jpg';
-import Car3 from '../../assets/cars/3.jpg';
-import Car4 from '../../assets/cars/4.jpg';
-import Car5 from '../../assets/cars/5.jpg';
-import Car6 from '../../assets/cars/6.jpg';
+import vanA1 from '../../assets/cars/vanA1.jpg';
+import vanA2 from '../../assets/cars/vanA2.jpg';
+import vanA3 from '../../assets/cars/vanA3.jpg';
+import vanA4 from '../../assets/cars/vanA4.jpg';
+import vanA5 from '../../assets/cars/vanA5.jpg';
+import vanB1 from '../../assets/cars/vanB1.jpg';
+import vanB2 from '../../assets/cars/vanB2.jpg';
+import vanB3 from '../../assets/cars/vanB3.jpg';
+import vanB4 from '../../assets/cars/vanB4.jpg';
 
 import TransimmsionLogo from '../../assets/transmission.svg';
 import SuitCaseLogo from '../../assets/suitcase.svg';
@@ -15,7 +17,7 @@ import PersonLogo from '../../assets/person.svg';
 const Cars = () => {
     const carsData = [
         {
-            images: [Car1, Car2, Car3],
+            images: [vanA1, vanA2, vanA3, vanA4, vanA5],
             name: 'DRIVE YOUR DREAMS',
             passengers: 2,
             trunk: 1,
@@ -23,7 +25,7 @@ const Cars = () => {
             price: 1000
         },
         {
-            images: [Car4, Car5, Car6],
+            images: [vanB1, vanB2, vanB3, vanB4],
             name: 'FEEL THE LUXURY',
             passengers: 4,
             trunk: 2,
@@ -39,7 +41,7 @@ const Cars = () => {
                     READY TO GET STARTED?
                 </h1>
                 <p className="text-md: md:text-md lg:text-xl text-gray-500 font-semibold text-center">
-                    Choose from our selection of high-end, late model, exotic sports cars, sedans, and SUVs from some of the world's top luxury car manufacturers.
+                    Choose from our selection of high-end, latest models of Vans from some of the world's top luxury car manufacturers.
                 </p>
             </div>
             <div className="pt-16 w-full h-full grid grid-cols-1 md:grid-cols-2 py-10 gap-10">
