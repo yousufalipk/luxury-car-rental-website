@@ -10,31 +10,29 @@ import Articles from '../Pages/Articles/Articles';
 import Footer from '../Components/Footer/Footer';
 
 import Cross from '../assets/cross.svg';
-import Facebook from '../assets/facebook.svg';
-import Twitter from '../assets/twitter.svg';
-import Instagram from '../assets/insta.svg';
+import Whatsapp from '../assets/whatsapp.svg';
 import Angle from '../assets/angle.svg';
 
 
 const UnAuthorized = () => {
 
-    const facebookLink = 'https://www.facebook.com';
-    const twitterLink = 'https://www.twitter.com';
-    const instagramLink = 'https://www.instagram.com';
-
     const { sideMenu, setSideMenu, isScrolled } = useUser();
     const [popupClosing, setPopupClosing] = useState(false);
-
-    useEffect(() => {
-        console.log('Is Scorlled', isScrolled);
-    }, [isScrolled]);
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            const offset = window.innerHeight * 0.09;
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const targetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth',
+            });
         }
     };
+
 
     return (
         <div className="w-full h-[100vh] relative">
@@ -81,40 +79,71 @@ const UnAuthorized = () => {
                         </div>
                         <div className='w-full h-full'>
                             <ul className='flex flex-col justify-center items-start px-10 text-2xl font-bold text-white gap-5'>
-                                <li className='hover:text-customYellow hover:cursor-pointer'>VEHICLES</li>
-                                <li className='hover:text-customYellow hover:cursor-pointer'>LOCATIONS</li>
-                                <li className='hover:text-customYellow hover:cursor-pointer'>SERVICES</li>
-                                <li className='hover:text-customYellow hover:cursor-pointer'>RENTAL POLICIES</li>
-                                <li className='hover:text-customYellow hover:cursor-pointer'>ABOUT US</li>
-                                <li className='hover:text-customYellow hover:cursor-pointer'>FAQ'S</li>
-                                <li className='hover:text-customYellow hover:cursor-pointer'>MY ACCOUNT</li>
+                                <li
+                                    onClick={() => {
+                                        setPopupClosing(true);
+                                        setTimeout(() => {
+                                            setSideMenu(false);
+                                            setPopupClosing(false);
+                                        }, 500);
+                                        scrollToSection('cars');
+                                    }}
+                                    className='hover:text-customYellow hover:cursor-pointer'
+                                >
+                                    VEHICLES
+                                </li>
+                                <li
+                                    onClick={() => {
+                                        setPopupClosing(true);
+                                        setTimeout(() => {
+                                            setSideMenu(false);
+                                            setPopupClosing(false);
+                                        }, 500);
+                                        scrollToSection('whyUs');
+                                    }}
+                                    className='hover:text-customYellow hover:cursor-pointer'
+                                >
+                                    SERVICES
+                                </li>
+                                <li
+                                    onClick={() => {
+                                        setPopupClosing(true);
+                                        setTimeout(() => {
+                                            setSideMenu(false);
+                                            setPopupClosing(false);
+                                        }, 500);
+                                        scrollToSection('getQuote');
+                                    }}
+                                    className='hover:text-customYellow hover:cursor-pointer'
+                                >
+                                    COMPANY
+                                </li>
+                                <li
+                                    onClick={() => {
+                                        setPopupClosing(true);
+                                        setTimeout(() => {
+                                            setSideMenu(false);
+                                            setPopupClosing(false);
+                                        }, 500);
+                                        scrollToSection('home');
+                                    }}
+                                    className='hover:text-customYellow hover:cursor-pointer'
+                                >
+                                    HOME
+                                </li>
                             </ul>
                         </div>
+
+                        {/* social links */}
                         <div className='w-full h-full my-20'>
                             <ul className='flex justify-start items-center gap-5 px-10'>
                                 <li
                                     onClick={() => {
-                                        window.open(facebookLink, "_blank");
+                                        window.open("https://api.whatsapp.com/send?phone=923021223335", "_blank");
                                     }}
-                                    className='hover:cursor-pointer'
+                                    className='hover:cursor-pointer hover:-translate-y-[3px] hover:scale-125 transition-transform duration-200 ease-out'
                                 >
-                                    <img src={Facebook} alt="facebook" width={25} className='invert' />
-                                </li>
-                                <li
-                                    onClick={() => {
-                                        window.open(twitterLink, "_blank");
-                                    }}
-                                    className='hover:cursor-pointer'
-                                >
-                                    <img src={Twitter} alt="facebook" width={25} className='invert' />
-                                </li>
-                                <li
-                                    onClick={() => {
-                                        window.open(instagramLink, "_blank");
-                                    }}
-                                    className='hover:cursor-pointer'
-                                >
-                                    <img src={Instagram} alt="facebook" width={25} className='invert' />
+                                    <img src={Whatsapp} alt="whatsapp" width={35} className='invert' />
                                 </li>
                             </ul>
                         </div>
@@ -123,7 +152,7 @@ const UnAuthorized = () => {
             )}
 
             {/* Navbar */}
-            <div id='navbar' className='w-full h-[15vh] fixed top-0 z-20'>
+            <div id='navbar' className='w-full h-[15vh] fixed top-0 z-30'>
                 <Navbar onNavigate={scrollToSection} />
             </div>
 
@@ -133,7 +162,7 @@ const UnAuthorized = () => {
             </section>
 
             {/* Cars */}
-            <section id='cars' className='w-full h-[400vh] lg:h-[200vh] py-20 flex justify-center items-center'>
+            <section id='cars' className='w-full h-[150vh] lg:h-[120vh] py-20 flex justify-center items-center'>
                 <Cars />
             </section>
 
